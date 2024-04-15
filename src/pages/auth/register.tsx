@@ -25,6 +25,7 @@ export function SignUp() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { isSubmitting },
   } = useForm<SignUpForm>()
 
@@ -47,6 +48,8 @@ export function SignUp() {
           onClick: () => navigate('/login'),
         },
       })
+
+      reset()
     } catch (error) {
       toast.error('Restaurante já existe na base de dados!')
     }
