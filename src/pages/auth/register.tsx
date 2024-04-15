@@ -1,6 +1,7 @@
 import { useMutation } from '@tanstack/react-query'
 import { Helmet } from 'react-helmet-async'
 import { useForm } from 'react-hook-form'
+import InputMask from 'react-input-mask'
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'sonner'
 import { z } from 'zod'
@@ -80,7 +81,9 @@ export function SignUp() {
               <Input
                 id="restaurantName"
                 type="text"
+                placeholder="Coffee Shop"
                 {...register('restaurantName')}
+                maxLength={30}
               />
             </div>
 
@@ -89,18 +92,32 @@ export function SignUp() {
               <Input
                 id="managerName"
                 type="text"
+                placeholder="Diego Ferreira"
                 {...register('managerName')}
+                maxLength={30}
               />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="email">Seu melhor e-mail</Label>
-              <Input id="email" type="email" {...register('email')} />
+              <Input
+                id="email"
+                type="email"
+                placeholder="exemplo@gmail.com"
+                {...register('email')}
+                maxLength={30}
+              />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="phone">Seu celular</Label>
-              <Input id="phone" type="tel" {...register('phone')} />
+              <InputMask
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                mask="(99) 99999-9999"
+                id="phone"
+                placeholder="(99) 99999-9999"
+                {...register('phone')}
+              />
             </div>
 
             <div className="text-center">
