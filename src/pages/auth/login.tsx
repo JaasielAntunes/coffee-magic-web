@@ -5,7 +5,7 @@ import { Link, useSearchParams } from 'react-router-dom'
 import { toast } from 'sonner'
 import { z } from 'zod'
 
-import { signIn } from '@/api/sign-in'
+import { signIn } from '@/api/login'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -37,15 +37,19 @@ export function SignIn() {
   })
 
   async function handleSignIn(data: SignInForm) {
-    await authenticate({
-      email: data.email,
-    })
-    toast.success('Um link de autenticaçao foi enviado para o seu e-mail!', {
-      action: {
-        label: 'Reenviar',
-        onClick: () => console.log('clicked'),
-      },
-    })
+    try {
+      await authenticate({
+        email: data.email,
+      })
+      toast.success('Um link de autenticaçao foi enviado para o seu e-mail!', {
+        action: {
+          label: 'Reenviar',
+          onClick: () => console.log('clicked'),
+        },
+      })
+    } catch (error) {
+      toast.error('E-mail inválido ou inexistente!')
+    }
   }
 
   return (
@@ -53,7 +57,7 @@ export function SignIn() {
       <Helmet title="Login" />
       <div className="p-8">
         <Button variant="ghost" asChild className="absolute right-8 top-8">
-          <Link to="/sign-up">Novo estabelecimento</Link>
+          <Link to="/register">Novo estabelecimento</Link>
         </Button>
 
         <div className="flex w-[400px] flex-col justify-center gap-6">
