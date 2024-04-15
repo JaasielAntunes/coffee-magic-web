@@ -1,4 +1,4 @@
-import { Pizza } from 'lucide-react'
+import { Coffee } from 'lucide-react'
 import { Outlet } from 'react-router-dom'
 
 export function AuthLayout() {
@@ -6,12 +6,12 @@ export function AuthLayout() {
     <div className="grid min-h-screen grid-cols-2 antialiased">
       <div className="flex h-full flex-col justify-between border-r border-foreground/5 bg-muted p-10 text-muted-foreground">
         <div className="flex items-center gap-3 text-lg text-foreground">
-          <Pizza className="h-5 w-5" />
-          <span className="font-semibold">pizza.shop</span>
+          <Coffee className="h-5 w-5" />
+          <span className="font-semibold">Coffee Magic</span>
         </div>
 
         <footer className="text-center text-sm">
-          Painel do parceiro &copy; pizza.shop - {new Date().getFullYear()}
+          Painel do parceiro &copy; Coffee Magic - {new Date().getFullYear()}
         </footer>
       </div>
 
