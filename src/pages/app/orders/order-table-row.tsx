@@ -54,13 +54,21 @@ export function OrderTableRow({ order }: OrderTableRowProps) {
         })}
       </TableCell>
       <TableCell>
-        <Button variant="outline" size="xs">
+        <Button
+          variant="outline"
+          className="text-green-500 hover:text-green-400"
+          size="xs"
+        >
           <ArrowRight className="mr-2 h-3 w-3" />
           Aprovar
         </Button>
       </TableCell>
       <TableCell>
-        <Button variant="ghost" size="xs">
+        <Button
+          variant="ghost"
+          size="xs"
+          className="text-red-500 hover:text-red-400"
+        >
           <X className="mr-2 h-3 w-3" />
           Cancelar
         </Button>
