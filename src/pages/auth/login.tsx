@@ -79,6 +79,7 @@ export function SignIn() {
                 {...register('email')}
                 disabled={isSubmitting}
                 maxLength={40}
+                required
               />
             </div>
 

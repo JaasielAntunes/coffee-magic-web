@@ -84,6 +84,7 @@ export function SignUp() {
                 placeholder="Coffee Shop"
                 {...register('restaurantName')}
                 maxLength={30}
+                required
               />
             </div>
 
@@ -95,6 +96,7 @@ export function SignUp() {
                 placeholder="Diego Ferreira"
                 {...register('managerName')}
                 maxLength={30}
+                required
               />
             </div>
 
@@ -106,6 +108,7 @@ export function SignUp() {
                 placeholder="exemplo@gmail.com"
                 {...register('email')}
                 maxLength={30}
+                required
               />
             </div>
 
@@ -117,6 +120,7 @@ export function SignUp() {
                 id="phone"
                 placeholder="(99) 99999-9999"
                 {...register('phone')}
+                required
               />
             </div>
 
