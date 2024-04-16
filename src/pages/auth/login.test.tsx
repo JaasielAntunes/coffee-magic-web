@@ -13,9 +13,7 @@ describe('Login', () => {
       wrapper: ({ children }) => {
         return (
           <HelmetProvider>
-            <MemoryRouter
-              initialEntries={['/sign-in?email=johndoe@example.com']}
-            >
+            <MemoryRouter initialEntries={['/login?email=johndoe@example.com']}>
               <QueryClientProvider client={queryClient}>
                 {children}
               </QueryClientProvider>
