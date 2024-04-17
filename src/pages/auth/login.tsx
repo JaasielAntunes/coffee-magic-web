@@ -72,10 +72,11 @@ export function SignIn() {
 
           <form onSubmit={handleSubmit(handleSignIn)} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email">Seu e-mail</Label>
+              <Label htmlFor="email">Informe o e-mail</Label>
               <Input
                 id="email"
                 type="email"
+                placeholder="E-mail do estabelecimento"
                 {...register('email')}
                 disabled={isSubmitting}
                 maxLength={40}
