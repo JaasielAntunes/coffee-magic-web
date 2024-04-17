@@ -12,8 +12,7 @@ test('cadastro feito com sucesso', async ({ page }) => {
 
   const toast = page.getByText('Restaurante cadastrado com sucesso!')
 
-  expect(toast).toBeVisible()
-  await page.waitForTimeout(2000)
+  await expect(toast).toBeVisible()
 })
 
 test('cadastro com dados inválidos', async ({ page }) => {
@@ -28,8 +27,7 @@ test('cadastro com dados inválidos', async ({ page }) => {
 
   const toast = page.getByText('Restaurante já existe na base de dados!')
 
-  expect(toast).toBeVisible()
-  await page.waitForTimeout(2000)
+  await expect(toast).toBeVisible()
 })
 
 test('navegar para tela de login', async ({ page }) => {

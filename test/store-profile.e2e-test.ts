@@ -15,11 +15,9 @@ test('atualização de perfil com sucesso', async ({ page }) => {
 
   const toast = page.getByText('Perfil atualizado com sucesso!')
 
-  expect(toast).toBeVisible()
+  await expect(toast).toBeVisible()
 
   await page.getByRole('button', { name: 'Close' }).click()
 
-  await page.waitForTimeout(2000)
-
-  expect(page.getByRole('button', { name: 'Rocket Café' })).toBeVisible()
+  await expect(page.getByRole('button', { name: 'Rocket Café' })).toBeVisible()
 })
