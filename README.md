@@ -12,7 +12,7 @@
 
 O Coffee Magic é uma aplicação Web que consiste em um sistema para controle interno de um estabelecimento fictício, no qual é apresentado um dashboard com informações importantes como receita total, pedidos por mês,
 pedidos por dia, cancelamentos, entre outros. A aplicação também possuí a área de cadastrar um estabelecimento, fazer Login e além disso, é possível trocar o tema para Light, Dark ou System. Para o funcionamento correto, a aplicação depende de uma API que é responsável pelo
-tratamento, validação e armazenamento dos dados.
+tratamento, validação e armazenamento dos dados. Por fim, foram realizados testes unitários e E2E para garantir o bom funcionamento da aplicação.
 
 ---
 
@@ -31,6 +31,7 @@ tratamento, validação e armazenamento dos dados.
 - JavaScript
 - TypeScript
 - Vite
+- Vitest
 - Radix UI
 - Lucide React
 - Axios
