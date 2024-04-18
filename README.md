@@ -41,6 +41,7 @@ tratamento, validação e armazenamento dos dados. Por fim, foram realizados tes
 - Localforage
 - Sort By
 - Zod
+- PlayWright
 
 ---
 
