@@ -26,6 +26,7 @@ tratamento, validação e armazenamento dos dados. Por fim, foram realizados tes
 
 - React e React-DOM
 - React Hook Form
+- React Input Mask
 - Date-fns
 - Tailwind CSS
 - JavaScript
