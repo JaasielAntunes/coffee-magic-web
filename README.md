@@ -75,13 +75,15 @@ $ bun seed
 $ bun dev
 ```
 
-5. Instale as dependências do projeto Web:
+5. Localize o arquivo seed.ts na pasta db e na parte de criar um administrador utilize um email de sua preferência para acesso ao painel.
+
+6. Instale as dependências do projeto Web:
 
 ```
 $ npm i
 ```
 
-6. Inicie o servidor:
+7. Inicie a aplicação:
 
 ```
 $ npm run dev
