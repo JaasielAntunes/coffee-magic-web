@@ -41,12 +41,15 @@ export function SignIn() {
       await authenticate({
         email: data.email,
       })
-      toast.success('Um link de autenticaçao foi enviado para o seu e-mail!', {
-        action: {
-          label: 'Reenviar',
-          onClick: () => console.log('clicked'),
+      toast.success(
+        'Um link de autenticaçao foi enviado para o servidor, copie e cole o link na barra de endereço para acessar o painel.',
+        {
+          action: {
+            label: 'Reenviar',
+            onClick: () => console.log('clicked'),
+          },
         },
-      })
+      )
     } catch (error) {
       toast.error('E-mail inválido ou inexistente!')
     }
