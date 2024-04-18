@@ -64,7 +64,7 @@ $ cd coffee-magic-web
 $ cd pizzashop-api
 ```
 
-4. Configurando e executando a API:
+4. Configurando e executando a API <br>
 Obs: A API depende do Docker para configurar o banco de dados. Com o Docker instalado, clone o projeto, instale as dependências, configure os contêineres do Docker e execute o aplicativo.
 É necessário ter instalado o framework Bun disponível em https://bun.sh/docs/installation#macos-and-linux.
 
